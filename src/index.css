@@ -1,0 +1,43 @@
+:root {
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --secondary: #a5b4fc;
+  --accent: #10b981;
+
+  --bg-canvas: #f3f4f6;
+  --bg-node: #ffffff;
+  --bg-sidebar: #f9fafb;
+  --border-color: #e5e7eb;
+
+  --port-input: #10b981;
+  --port-output: #4f46e5;
+
+  --font-family: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-canvas);
+  color: #111827;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+button {
+  font-family: var(--font-family);
+  cursor: pointer;
+}

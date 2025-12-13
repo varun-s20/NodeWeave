@@ -1,0 +1,121 @@
+.builder-layout{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.builder-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    z-index: 10;
+    height: 64px;
+    background-color: white;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-left{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.header-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #111827;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  background: var(--primary);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-right{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  padding: 8px;
+  color: #6B7280;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:hover {
+  background-color: #F3F4F6;
+  color: #111827;
+}
+
+.avatar-wrapper {
+  position: relative;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #eef2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.logout-dropdown {
+  position: absolute;
+  top: 44px;
+  right: 0;
+  width: 140px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 6px;
+  z-index: 100;
+}
+
+.logout-dropdown button {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.logout-dropdown button:hover {
+  background: #f3f4f6;
+}
+
+.builder-body{
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+.builder-canvas-area{
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--bg-canvas);
+}
