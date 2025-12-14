@@ -1,18 +1,101 @@
-# React + Vite
+# NodeWeave
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+NodeWeave is a powerful, visual workflow automation builder designed to streamline complex logic creation through an intuitive drag-and-drop interface. Built with modern web technologies, it offers a seamless experience for designing, connecting, and managing workflow nodes.
 
-Currently, two official plugins are available:
+<img width="1835" height="910" alt="image" src="https://github.com/user-attachments/assets/398b5bc9-6f59-4f18-819e-712accb9ac91" />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **Visual Workflow Builder**: An infinite canvas that allows for unrestricted movement and organization of workflow steps.
+- **Drag-and-Drop Interface**: Easily connect logic blocks by dragging nodes from the sidebar onto the canvas.
+- **Smart Connections**: intuitive connection system allowing linking between Input and Output ports.
+- **Node Persistence**: Your workflows are automatically saved to local storage, ensuring you never lose progress between sessions.
+- **Context Management**: Right-click context menus on nodes for quick actions like deletion.
+- **Categorized Logic**: Nodes are organized into distinct categories (Triggers, Actions, Conditions, Loops) with color-coded visual cues.
+- **Responsive Design**: A polished, modern user interface built for usability.
 
-Note: This will impact Vite dev & build performances.
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- **Framework**: [React 19](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Routing**: [React Router DOM v7](https://reactrouter.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Styling**: Vanilla CSS3 with CSS Variables for consistent theming.
+- **State Persistence**: Browser LocalStorage API.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📦 Installation & Setup
+
+Follow these steps to get NodeWeave running on your local machine.
+
+### Prerequisites
+
+- Node.js (v18 or higher recommended)
+- npm or yarn
+
+### Steps
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/varun-s20/nodeweave.git
+   cd nodeweave
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Open the application**
+   Navigate to `http://localhost:5173` (or the port shown in your terminal) to view the app.
+
+## 🎮 Usage Guide
+
+### Adding Nodes
+
+1. Visit the Sidebar categories (Triggers, Actions, etc.).
+2. Drag a node (e.g., "Webhook" or "Send Email") onto the central canvas area.
+
+### Connecting Nodes
+
+1. Hover over a node to see its connection ports (dots).
+2. Click and drag from an **Output** port (Right side) of one node.
+3. Drop the connection line onto an **Input** port (Left side) of another node.
+
+### Deleting Nodes
+
+1. Click the "Three Dots" menu icon on the node header.
+2. Select **Delete** to remove the node and its associated connections.
+
+### Navigation
+
+- Click and drag on the empty canvas space to **Pan** around the workflow.
+
+## 📂 Project Structure
+
+```
+src/
+├── components/
+│   ├── workflow/
+│   │   ├── Canvas.jsx       # Main workspace logic (Drag, Drop, Pan, Zoom)
+│   │   ├── Node.jsx         # Individual node component
+│   │   ├── Sidebar.jsx      # Node palette
+│   │   ├── Connections.jsx  # SVG connection lines
+│   │   └── constants.js     # Config for categories and colors
+├── pages/
+│   ├── BuilderPage/         # Layout for the builder view
+│   └── LoginPage/           # Authentication screens
+├── App.jsx                  # Main routing and layout
+└── main.jsx                 # Entry point
+```
+
+🔗 **Live Demo:** [View NodeWeave in Action](https://nodeweave.vercel.app/)
+
