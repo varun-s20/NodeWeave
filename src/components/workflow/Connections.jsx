@@ -1,6 +1,6 @@
 import React from "react";
 
-const Connections = ({ start, end, animated  }) => {
+const Connections = ({ start, end, animated }) => {
   const dx = Math.abs(end.x - start.x);
   const curvature = Math.max(dx * 0.6, 120);
   const midY = (start.y + end.y) / 2;

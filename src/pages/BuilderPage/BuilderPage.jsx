@@ -13,6 +13,8 @@ const BuilderPage = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("workflow-nodes");
+    localStorage.removeItem("workflow-connections");
     navigate("/login");
   };
 
@@ -32,6 +34,14 @@ const BuilderPage = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  const canvasRef = useRef(null);
+
+  const handleAddNode = () => {
+    if (canvasRef.current) {
+      canvasRef.current.addNode("Webhook"); 
+    }
+  };
 
   return (
     <div className="builder-layout">
@@ -69,10 +79,10 @@ const BuilderPage = () => {
       </header>
 
       <main className="builder-body">
-        <Sidebar />
+        <Sidebar onAddNode={handleAddNode} />
 
         <main className="builder-canvas-area">
-          <Canvas />
+          <Canvas ref={canvasRef} />
         </main>
       </main>
     </div>
