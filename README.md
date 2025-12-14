@@ -13,7 +13,6 @@ NodeWeave is a powerful, visual workflow automation builder designed to streamli
 - **Node Persistence**: Your workflows are automatically saved to local storage, ensuring you never lose progress between sessions.
 - **Context Management**: Right-click context menus on nodes for quick actions like deletion.
 - **Categorized Logic**: Nodes are organized into distinct categories (Triggers, Actions, Conditions, Loops) with color-coded visual cues.
-- **Responsive Design**: A polished, modern user interface built for usability.
 
 ## 🛠️ Tech Stack
 
