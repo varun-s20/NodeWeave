@@ -14,10 +14,14 @@ const Sidebar = () => {
     { name: "Variables", items: ["Set Variable", "Get Variable"] },
   ];
 
+  const handleAddNode = () => {
+    
+  };
+
   return (
     <aside className="builder-sidebar">
       <div className="sidebar-action-section">
-        <button className="add-node-btn">
+        <button className="add-node-btn" onClick={handleAddNode}>
           <Plus size={20} />
           <span>Add Node</span>
         </button>
